@@ -1,0 +1,866 @@
+:root {
+    --main-color: rgba(0, 137, 252, 1);
+    --main-color-light: rgba(173, 215, 255, 1);
+    --main-color-lighter: rgba(214, 235, 255, 1);
+    --main-color-avesome-light: rgba(199, 228, 255, 0.5);
+    --text-color: rgba(47, 66, 92, 1);
+    --text-color-light: rgba(47, 66, 92, .5);
+}
+
+body {
+    padding-left: 25.6px;
+    padding-top: 25.6px;
+    padding-right: 25.6px;
+    font-family: 'Rubik';
+    background-color: var(--main-color-lighter);
+}
+
+img {
+    max-width: 100%;
+}
+
+.section-block,
+.section-block--light {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1792px;
+}
+
+.section-block {
+    margin-top: 121.6px;
+}
+
+.section-block--light {
+    margin-top: 0;
+}
+
+.section-title {
+    font-size: 76.8px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 76.8px;
+}
+
+.section-title-wth-text {
+    margin-bottom: 0px;
+}
+
+.section-text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-color-light);
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.dark-sections {
+    background-color: rgba(173, 215, 255, 1);
+    border-radius: 51.2px;
+    padding-top: 96px;
+    margin-top: 96px;
+    padding-bottom: 80px;
+}
+
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, .4), 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255, .2), 0px 0px 0px 10px rgba(255, 255, 255, 0);
+    }
+}
+
+
+@keyframes borderPulseLight {
+    0% {
+        box-shadow: inset 0px 0px 0px 5px var(--main-color-lighter), 0px 0px 0px 0px var(--main-color-light);
+    }
+
+    100% {
+        box-shadow: inset 0px 0px 0px 3px var(--main-color-lighter), 0px 0px 0px 10px var(--main-color-light);
+    }
+}
+
+@keyframes borderPulseLighter {
+    0% {
+        box-shadow: inset 0px 0px 0px 5px var(--main-color-avesome-light), 0px 0px 0px 0px var(--main-color-avesome-light);
+    }
+
+    100% {
+        box-shadow: inset 0px 0px 0px 3px var(--main-color-avesome-light), 0px 0px 0px 10px var(--main-color-avesome-light);
+    }
+}
+
+
+.light-text {
+    color: var(--text-color-light);
+}
+
+
+/* Head */
+
+header {
+    background-image: url('/img/first_screen.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 12.8px;
+    padding-right: 12.8px;
+    padding-left: 12.8px;
+    border-radius: 51.2px;
+    height: 1341px;
+    overflow: hidden;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 9.6px;
+    padding-bottom: 9.6px;
+    border-radius: 41.6px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.main-logo {
+    max-width: 195.2px;
+    width: 100%;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    gap: 19.2px;
+}
+
+.main-menu-item {
+    padding: 12.8px;
+}
+
+
+.menu-item-link {
+    color: var(--text-color);
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 22.4px;
+}
+
+.socials,
+.socials-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12.8px;
+}
+
+.social-block {
+    max-width: 52.8px;
+}
+
+
+.game-btn {
+    position: relative;
+    background-color: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 22.4px;
+    font-weight: 800;
+    padding-left: 19.2px;
+    padding-top: 12.8px;
+    padding-right: 60.8px;
+    padding-bottom: 12.8px;
+    border-radius: 38.4px;
+    overflow: hidden;
+}
+
+
+.game-btn:after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    bottom: 1px;
+    background-image: url('/img/clayton/clayton_btn.png');
+    width: 51.2px;
+    height: 51.2px;
+}
+
+/* End head */
+
+
+/* First screen */
+
+.first-screen {
+    position: relative;
+}
+
+.first-screen-content {
+    padding-left: 64px;
+}
+
+
+.first-screen-title {
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 119.2px;
+    line-height: 138.24px;
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 134px;
+    margin-bottom: 51.2px;
+}
+
+.clayton-title {
+    position: relative;
+    padding-right: 140px;
+}
+
+.clayton-title:after {
+    content: '';
+    position: absolute;
+    width: 134.4px;
+    height: 99.68px;
+    background-image: url('/img/clayton/clayton_title.png');
+    background-size: cover;
+    background-position: center;
+    right: 0;
+    bottom: 15px;
+}
+
+
+.first-screen-text {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.4px;
+    color: var(--text-color-light);
+    max-width: 680px;
+    width: 100%;
+    margin-bottom: 76.8px;
+}
+
+.farm-btn {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 51.2px;
+    padding-left: 32px;
+    padding-top: 30.2px;
+    padding-right: 99.2px;
+    padding-bottom: 30.2px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 35.2px;
+}
+
+.farm-btn:hover,
+.farm-btn:focus {
+    animation: borderPulse 1000ms infinite ease-out;
+}
+
+
+.farm-btn:after {
+    content: '';
+    position: absolute;
+    width: 51.2px;
+    height: 51.2px;
+    background-image: url('/img/clayton/clayton_coin.png');
+    background-size: cover;
+    background-position: center;
+    right: 32px;
+    bottom: 25.6px;
+}
+
+
+.first-screen-image {
+    position: absolute;
+    top: 17.8px;
+    right: 0;
+}
+
+/* End first screen */
+
+
+/* About section */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1792px;
+    margin: auto;
+    gap: 19.2px;
+}
+
+.about-item {
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 38.4px;
+    padding-right: 38.4px;
+    padding-bottom: 38.4px;
+    padding-left: 38.4px;
+    border-radius: 76.8px;
+}
+
+.about-item-title {
+    font-weight: 900;
+    font-size: 51.2px;
+    color: var(--text-color);
+    margin-top: 25.6px;
+    margin-bottom: 19.2px;
+}
+
+.about-item-text {
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--text-color-light);
+}
+
+.about-item-more-btn {
+    background-color: var(--main-color);
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 28.8px;
+    border-radius: 51.2px;
+    padding: 32px;
+    display: block;
+    width: fit-content;
+    margin-top: 19.2px;
+}
+
+
+.about-item--bigger {
+    max-width: 845px;
+    width: 100%;
+}
+
+.about-image--bigger {
+    width: 100%;
+}
+
+.about-items--little {
+    display: grid;
+    gap: 19.2px;
+}
+
+/* End about */
+
+
+/* Slider */
+
+
+.slider-container {
+    width: 100%;
+    margin: 96px auto 0 auto;
+    overflow: hidden;
+    border-radius: 76.8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 1.5s ease;
+    width: 100%;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    padding-top: 64px;
+    padding-left: 102.4px;
+    padding-bottom: 64px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.slide.black {
+    background-image: url('/img/slider/black_bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    max-width: 800px;
+}
+
+.slide-title {
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 86.8px;
+    margin-top: 0;
+    margin-bottom: 38.4px;
+}
+
+.slider-text-reverse-color {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border-radius: 51.2px;
+    padding: 8px;
+}
+
+.slide-more-block {
+    margin-top: 38.4px;
+}
+
+
+.slide-more-btn {
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--main-color);
+    border-radius: 38.4px;
+    -webkit-box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
+    -moz-box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
+    box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
+    padding: 25.6px;
+    font-size: 25.6px;
+    font-weight: 800;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    transition: all .5s ease;
+}
+
+.slide-more-btn.--black {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.slide-more-btn:hover,
+.slide-more-btn:focus {
+    animation: borderPulseLight 1000ms infinite ease-out;
+}
+
+.slite-text {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: rgba(255, 255, 255, .5)
+}
+
+.slide-image {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+
+.slider-nav {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 6.4px;
+}
+
+.slider-control {
+    width: 12.8px;
+    height: 9.6px;
+    background-color: var(--main-color-light);
+    border-radius: 25.6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-control.active {
+    width: 64px;
+    background-color: var(--main-color);
+}
+
+.slider-arrows-block {
+    display: flex;
+    align-items: center;
+    gap: 12.8px;
+}
+
+.slider-arrow {
+    padding: 12.8px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--main-color);
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider-arrow:hover {
+    background-color: var(--main-color);
+}
+
+.slider-arrow:hover svg path {
+    fill: rgba(255, 255, 255, 1);
+}
+
+/* End slider */
+
+/* Roadmap */
+
+.roadmap-section.blocked {
+    pointer-events: none;
+    /* Disable all interactions when blocked */
+}
+
+.roadmap-block {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 160px;
+    padding-right: 200px;
+    margin-top: 76.8px;
+}
+
+.icon {
+    transition: fill 0.3s ease;
+}
+
+.icon.active rect {
+    fill: var(--main-color);
+    /* Color when icon is active */
+
+}
+
+.icon.active path {
+    fill: rgba(255, 255, 255, 1);
+}
+
+.progress-bar,
+.progress-bar-disabled {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    height: 12.8px;
+    width: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    transition: width 0.1s ease-in-out;
+}
+
+.progress-bar-disabled {
+    width: 100%;
+    background: var(--main-color-lighter);
+    z-index: 0;
+}
+
+.scroll-block {
+    overflow: hidden;
+    /* Hide scroll on the body when the block is visible */
+}
+
+.roadmap-content {
+    margin-top: 23px;
+}
+
+.roadmap-item-icon {
+    max-width: 83.2px;
+    max-height: 83.2px;
+    position: relative;
+    z-index: 1;
+}
+
+.roadmap-item-icon svg rect,
+.roadmap-item-icon svg path {
+    transition: fill 0.5s ease;
+}
+
+.roadmap-data,
+.partner-more-btn {
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--main-color);
+    border-radius: 16px;
+    padding: 9.6px;
+    width: fit-content;
+    font-size: 19.2px;
+    line-height: 23.4px;
+    transition: all .5s ease;
+}
+
+.partner-more-btn:hover,
+.partner-more-btn:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--main-color);
+}
+
+
+.roadmap-item-title {
+    margin-top: 19.2px;
+    margin-bottom: 19.2px;
+    font-weight: 800;
+    font-size: 38.4px;
+    line-height: 46.8px;
+    color: var(--text-color);
+}
+
+.roadmap-item-content {
+    visibility: hidden;
+    transition: all 1s ease;
+}
+
+.roadmap-item-content.visible {
+    visibility: visible;
+}
+
+.roadmap-item-text {
+    padding-left: 17px;
+    font-size: 22.4px;
+    line-height: 26.88px;
+    color: var(--text-color-light);
+}
+
+.roadmap-item-text>li {
+    margin-bottom: 12.8px;
+}
+
+.roadmap-item-text>li::marker {
+    color: var(--main-color);
+}
+
+/* End roadmap */
+
+/* Partners */
+
+.partners-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 19.2px;
+}
+
+.partners-item {
+    position: relative;
+    background-color: var(--main-color-avesome-light);
+    border-radius: 38.4px;
+    padding: 38.4px 0 38.4px 38.4px;
+    max-width: 472px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.partner-name {
+    font-size: 38.4px;
+    line-height: 46.08px;
+    font-weight: 900;
+    color: var(--text-color);
+    margin-top: 51.2px;
+    margin-bottom: 12.8px;
+}
+
+.partner-more-btn {
+    text-decoration: none;
+}
+
+.clayton-partner {
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+}
+
+/* End partners */
+
+/* Tokenomics */
+
+.tokenomics-block {
+    border-radius: 38.4px;
+    padding-bottom: 64px;
+    padding-top: 64px;
+    background-color: var(--main-color-avesome-light);
+    position: relative;
+}
+
+.tokenomics-title {
+    font-size: 76.8px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: 0;
+}
+
+.tokenomics-img {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    max-width: 520px;
+}
+
+/* End tokenomics */
+
+/* Games */
+
+.games-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 19.2px;
+}
+
+.games-item {
+    border-radius: 76.8px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 38.4px;
+    width: fit-content;
+}
+
+.games-item-content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25.6px;
+}
+
+.games-iem-content {
+    display: flex;
+    align-items: center;
+    gap: 25.6px;
+}
+
+.game-name {
+    font-weight: 900;
+    font-size: 51.2px;
+    line-height: 61.44px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+.game-deacription {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: var(--text-color-light);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.games-item-play {
+    border-radius: 51.2px;
+    padding: 32px;
+    background-color: var(--main-color-lighter);
+    font-size: 28.8px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all .5s ease;
+}
+
+.games-item-play:hover,
+.games-item-play:focus {
+    animation: borderPulseLighter 1000ms infinite ease-out;
+}
+
+/* End games */
+
+
+/* Pre-footer */
+
+.pre-footer-section {
+    background-color: var(--main-color);
+    padding: 64px 102.4px 592.4px 102.4px;
+    margin-top: 160px;
+    border-radius: 51.2px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/img/pre_footer/pre_footer_bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.pre-footer-content {
+    max-width: 49%;
+}
+
+.pre-footer-title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 89.6px;
+    line-height: 107.52px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 25.6px;
+}
+
+.pre-footer-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.pre-footer-btn {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 51.2px;
+    padding: 25.6px 32px 25.6px 32px;
+    color: var(--main-color);
+    font-size: 28.8px;
+    font-weight: 800;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin-top: 51.2px;
+    transition: all .5s ease;
+}
+
+.pre-footer-btn:hover,
+.pre-footer-btn:focus {
+    animation: borderPulseLight 1000ms infinite ease-out;
+}
+
+.pre-footer-clayton {
+    position: absolute;
+    right: 5%;
+    bottom: -4px;
+    max-width: 650px;
+}
+
+/* End pre-footer */
+
+
+/* Footer */
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 64px;
+    padding-right: 64px;
+    margin-top: 38.4px;
+    padding-bottom: 38.4px;
+}
+
+.footer-logo {
+    width: 227px;
+}
+
+.footer-copy-text {
+    font-weight: 400;
+    font-size: 22.4px;
+    color: var(--text-color-light);
+    margin-top: 0;
+    margin-bottom: 0;
+}
