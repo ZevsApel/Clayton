@@ -570,7 +570,19 @@ header {
 
 .scroll-block {
     overflow: hidden;
+    padding-right: 42.6px;
+    position: relative;
     /* Hide scroll on the body when the block is visible */
+}
+
+.scroll-block:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px; /* Примерная ширина скроллбара */
+    height: 100%;
+    background-color: #f0f0f0; /* Цвет фона для имитации скроллбара */
 }
 
 .roadmap-content {
