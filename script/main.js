@@ -66,22 +66,20 @@ $(document).ready(function() {
     const $icons = $roadmap.find('.icon');
     const $content = $roadmap.find('.roadmap-item-content');
     const maxProgress = 90;
-    const progressIncrement = 5; // Percentage to increase per scroll event
+    const progressIncrement = 5; // Увеличение на 5% за каждое прокручивание
     let progress = 0;
     let scrollBlocked = false;
     let isInsideBlock = false;
 
     function updateProgressBar(delta) {
         if (progress < maxProgress) {
-            // Update progress based on scroll delta
             progress = Math.min(progress + delta, maxProgress);
             $progressBar.css('width', `${progress}%`);
             updateIcons();
             showContent();
 
             if (progress >= maxProgress) {
-                $('body').removeClass('scroll-block'); // Remove class to show scroll
-                $roadmapBlock.css('overflow', 'hidden'); // Disable scroll inside block
+                $('body').removeClass('scroll-block');
                 scrollBlocked = false;
             }
         }
@@ -108,7 +106,7 @@ $(document).ready(function() {
             } else {
                 $contentItem.removeClass('visible');
             }
-        })
+        });
     }
 
     function checkBlockVisibility() {
@@ -126,16 +124,14 @@ $(document).ready(function() {
             if (scrollBottom > blockOffsetTop && scrollTop < blockBottom) {
                 if (scrollBottom >= lastItemBottom) {
                     if (!scrollBlocked && progress < maxProgress) {
-                        $('body').addClass('scroll-block'); // Add class to hide scroll
-                        $roadmapBlock.css('overflow', 'auto'); // Enable scroll inside block
+                        $('body').addClass('scroll-block'); 
                         scrollBlocked = true;
                     }
                 }
                 isInsideBlock = true;
             } else {
                 if (scrollBlocked) {
-                    $('body').removeClass('scroll-block'); // Remove class to show scroll
-                    $roadmapBlock.css('overflow', 'hidden'); // Disable scroll inside block
+                    $('body').removeClass('scroll-block');
                     scrollBlocked = false;
                 }
                 isInsideBlock = false;
@@ -144,16 +140,16 @@ $(document).ready(function() {
     }
 
     function handleScroll(e) {
-        if (progress < maxProgress) {
+        if (progress < maxProgress && scrollBlocked) {
             const delta = e.originalEvent.deltaY > 0 ? progressIncrement : -progressIncrement;
             updateProgressBar(delta);
         }
     }
 
-    // Event listeners
     $(window).on('scroll', function() {
         checkBlockVisibility();
     });
 
-    $roadmapBlock.on('wheel', handleScroll);
+    $(window).on('wheel', handleScroll);
 });
+

@@ -5,6 +5,13 @@
     --main-color-avesome-light: rgba(199, 228, 255, 0.5);
     --text-color: rgba(47, 66, 92, 1);
     --text-color-light: rgba(47, 66, 92, .5);
+    --section-title-size: 63.8px;
+    --content-title-size: 40.2px;
+    --content-text-size-big: 32px;
+    --content-text-size: 25px;
+    --button-font-size-big: 28.8px;
+    --button-font-size: 23.8px;
+    --button-padding: 20px;
 }
 
 body {
@@ -30,6 +37,7 @@ img {
 
 .section-block {
     margin-top: 90.6px;
+    max-width: 1430px;
 }
 
 .section-block--light {
@@ -37,7 +45,7 @@ img {
 }
 
 .section-title {
-    font-size: 63.8px;
+    font-size: var(--section-title-size);
     font-weight: 900;
     text-align: center;
     color: var(--text-color);
@@ -50,7 +58,7 @@ img {
 }
 
 .section-text {
-    font-size: 32px;
+    font-size: var(--content-text-size-big);
     line-height: 40px;
     font-weight: 400;
     color: var(--text-color-light);
@@ -159,7 +167,7 @@ header {
     color: var(--text-color);
     font-weight: 900;
     text-decoration: none;
-    font-size: 22.4px;
+    font-size: 20px;
 }
 
 .socials,
@@ -246,7 +254,7 @@ header {
 
 
 .first-screen-text {
-    font-size: 32px;
+    font-size: var(--content-text-size-big);
     font-weight: 600;
     line-height: 38.4px;
     color: var(--text-color-light);
@@ -266,7 +274,7 @@ header {
     font-weight: 800;
     color: var(--main-color);
     text-decoration: none;
-    font-size: 35.2px;
+    font-size: var(--button-font-size-big);
 }
 
 .farm-btn:hover,
@@ -305,7 +313,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1792px;
+    max-width: 1430px;
     margin: auto;
     gap: 19.2px;
 }
@@ -321,7 +329,7 @@ header {
 
 .about-item-title {
     font-weight: 900;
-    font-size: 40.2px;
+    font-size: var(--content-title-size);
     color: var(--text-color);
     margin-top: 19.6px;
     margin-bottom: 12.2px;
@@ -329,7 +337,7 @@ header {
 
 .about-item-text {
     font-weight: 500;
-    font-size: 25px;
+    font-size: var(--content-text-size);
     color: var(--text-color-light);
     margin-top: 0;
 }
@@ -339,9 +347,9 @@ header {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-weight: 800;
-    font-size: 23.8px;
+    font-size: var(--button-font-size);
     border-radius: 51.2px;
-    padding: 20px;
+    padding: var(--button-padding);
     display: block;
     width: fit-content;
     margin-top: 19.2px;
@@ -448,8 +456,8 @@ header {
     -webkit-box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
     -moz-box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
     box-shadow: 0px 0px 0px 6.4px var(--main-color-lighter);
-    padding: 25.6px;
-    font-size: 25.6px;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
     font-weight: 800;
     text-decoration: none;
     display: block;
@@ -469,9 +477,9 @@ header {
     animation: borderPulseLight 1000ms infinite ease-out;
 }
 
-.slite-text {
+.slide-text {
     font-weight: 400;
-    font-size: 32px;
+    font-size: var(--content-text-size);
     line-height: 38.4px;
     color: rgba(255, 255, 255, .5)
 }
@@ -480,7 +488,7 @@ header {
     position: absolute;
     bottom: -4px;
     right: 0;
-    max-width: 650px;
+    max-width: 600px;
     width: 100%;
 }
 
@@ -662,7 +670,7 @@ header {
 
 .roadmap-item-text {
     padding-left: 17px;
-    font-size: 22.4px;
+    font-size: var(--content-text-size);
     line-height: 26.88px;
     color: var(--text-color-light);
 }
@@ -752,6 +760,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 19.2px;
+    max-width: 1430px;
 }
 
 .games-item {
@@ -781,7 +790,7 @@ header {
 
 .game-name {
     font-weight: 900;
-    font-size: 40.2px;
+    font-size: var(--content-title-size);
     line-height: 49.44px;
     margin-top: 0;
     margin-bottom: 0;
@@ -790,7 +799,7 @@ header {
 
 .game-description {
     font-weight: 500;
-    font-size: 25px;
+    font-size: var(--content-text-size);
     color: var(--text-color-light);
     margin-top: 0;
     margin-bottom: 0;
@@ -798,9 +807,9 @@ header {
 
 .games-item-play {
     border-radius: 51.2px;
-    padding: 20px;
+    padding: var(--button-padding);
     background-color: var(--main-color-lighter);
-    font-size: 23.8px;
+    font-size: var(--button-font-size);
     font-weight: 800;
     text-decoration: none;
     color: var(--main-color);
@@ -844,7 +853,7 @@ header {
 
 .pre-footer-text {
     color: rgba(255, 255, 255, .7);
-    font-size: 32px;
+    font-size: var(--content-text-size-big);
     line-height: 38.4px;
     margin-top: 0;
     margin-bottom: 0;
@@ -856,7 +865,7 @@ header {
     border-radius: 51.2px;
     padding: 25.6px 32px 25.6px 32px;
     color: var(--main-color);
-    font-size: 28.8px;
+    font-size: var(--button-font-size-big);
     font-weight: 800;
     text-decoration: none;
     display: block;
