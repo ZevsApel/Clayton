@@ -65,7 +65,7 @@ $(document).ready(function() {
     const $roadmapItems = $roadmap.find('.roadmap-item');
     const $icons = $roadmap.find('.icon');
     const $content = $roadmap.find('.roadmap-item-content');
-    const maxProgress = 100;
+    const maxProgress = 90;
     const progressIncrement = 5; // Percentage to increase per scroll event
     let progress = 0;
     let scrollBlocked = false;
