@@ -46,11 +46,11 @@ $(document).ready(function() {
     });
 
     // Автоскролл
-    let autoScroll = setInterval(nextSlide, 7000);
+    let autoScroll = setInterval(nextSlide, 700000);
 
     function resetAutoScroll() {
         clearInterval(autoScroll);
-        autoScroll = setInterval(nextSlide, 7000);
+        autoScroll = setInterval(nextSlide, 700000);
     }
 
     // Инициализация слайда
@@ -66,7 +66,7 @@ $(document).ready(function() {
     const $icons = $roadmap.find('.icon');
     const $content = $roadmap.find('.roadmap-item-content');
     const maxProgress = 90;
-    const progressIncrement = 5; // Увеличение на 5% за каждое прокручивание
+    const progressIncrement = 6; // Увеличение на 6% за каждое прокручивание
     let progress = 0;
     let scrollBlocked = false;
     let isInsideBlock = false;
@@ -101,7 +101,7 @@ $(document).ready(function() {
         $content.each(function() {
             const $contentItem = $(this);
             const percent = parseFloat($contentItem.data('progress'));
-            if(progress >= percent) {
+            if (progress >= percent) {
                 $contentItem.addClass('visible');
             } else {
                 $contentItem.removeClass('visible');
@@ -146,10 +146,21 @@ $(document).ready(function() {
         }
     }
 
+    function handleTouchMove(e) {
+        if (progress < maxProgress && scrollBlocked) {
+            // Можно использовать дистанцию движения пальца для расчета дельты
+            const touch = e.originalEvent.touches[0];
+            const delta = touch.pageY > 0 ? progressIncrement : -progressIncrement;
+            updateProgressBar(delta);
+        }
+    }
+
     $(window).on('scroll', function() {
         checkBlockVisibility();
     });
 
     $(window).on('wheel', handleScroll);
+    $(window).on('touchmove', handleTouchMove);
 });
+
 
