@@ -2090,6 +2090,14 @@ header {
 
 
 @media(max-width: 414px) {
+
+
+    body {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
     .mobile-logo {
         max-width: 120px;
     }
@@ -2142,7 +2150,7 @@ header {
 
 
     .section-block {
-        max-width: 320px;
+        max-width: 343px;
     }
 
     .about-item {
@@ -2174,6 +2182,30 @@ header {
     }
 
 
+    .dark-sections .section-block {
+        margin-top: 48px;
+    }
+
+    .dark-sections {
+        padding-top: 40px;
+        padding-bottom: 12px;
+        border-radius: 24px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .section-text {
+        line-height: 19px;
+        font-size: 16px;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 
 
     .slider-container {
@@ -2181,7 +2213,7 @@ header {
     }
 
     .slide {
-        padding-bottom: 330px;
+        padding-bottom: 235px;
     }
 
 
@@ -2219,5 +2251,204 @@ header {
     .slider-control {
         width: 8px;
         height: 6px;
+    }
+
+    .black .slide-image {
+        max-width: 270px;
+    }
+
+
+
+    .roadmap-block {
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-wrap: wrap;
+    }
+
+    .roadmap-item {
+        align-items: flex-start;
+    }
+
+    .roadmap-content {
+        width: 140px;
+    }
+
+    .roadmap-item-title {
+        margin-top: 23px;
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .roadmap-item-text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .progress-bar, .progress-bar-disabled {
+        width: 8px;
+        margin-left: -4px;
+    }
+
+    .roadmap-item-icon {
+        max-width: 53px;
+        margin-top: 23px;
+    }
+
+    .roadmap-item-icon>svg {
+        max-width: 52px;
+    }
+
+
+
+    .partners-block, .tokenomics-block {
+        max-width: 335px;
+    }
+
+
+    .partners-item {
+        padding: 12px;
+        border-radius: 24px;
+    }
+
+    .partner-logo {
+        max-width: 44px;
+    }
+
+    .partner-name {
+        margin-top: 12px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .clayton-partner {
+        max-width: 120px;
+    }
+
+    .roadmap-data, .partner-more-btn {
+        font-size: 12px;
+        padding: 6px;
+        border-radius: 10px;
+    }
+
+
+    .tokenomics-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .tokenomics-block {
+        padding: 24px 24px 0 24px;
+    }
+
+    .tokenomics-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .section-text {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+
+
+    .games-item {
+        padding: 12px;
+        border-radius: 32px;
+    }
+
+    .games-item-content-block {
+        margin-top: 12px;
+    }
+
+    .games-item-content {
+        gap: 8px;
+    }
+    
+
+    .games-content-icon-block {
+        max-width: 46px;
+    }
+
+    .game-name {
+        font-size: 24px;
+    }
+
+    .game-description {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .games-item-play {
+        font-size: 16px;
+        padding: 16px;
+        border-radius: 32px;
+    }
+
+
+    .pre-footer-section {
+        margin-top: 56px;
+        border-radius: 24px;
+        padding: 40px 12px 310px 12px;
+    }
+
+    .pre-footer-title {
+        font-size: 40px;
+        line-height: 48px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+
+    .pre-footer-text {
+        color: rgba(255, 255, 255, .5);
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .pre-footer-btn {
+        font-size: 18px;
+        padding: 16px;
+        margin-top: 32px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 32px;
+    }
+
+    .pre-footer-clayton {
+        max-width: 235px;
+        position: absolute;
+        left: 50%;
+        margin-left: calc(-235px / 2);
+        bottom: -19%;
+    }
+
+
+
+    .footer-section {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 28px;
+        padding-bottom: 24px;
+    }
+
+    .footer-logo-block {
+        max-width: 142px;
+    }
+
+    .footer-copy-text {
+        font-size: 14px;
+    }
+}
+
+
+@media(max-width: 375px) {
+    .roadmap-item-icon {
+        max-width: 51px;
+    }
+
+    .roadmap-content {
+        width: 139px;
     }
 }
